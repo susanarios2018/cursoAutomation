@@ -13,8 +13,10 @@ public class Main {
             try {
                 System.out.print("Primer valor: ");
                 int num1 = scanner.nextInt();
+                calculadora.setNum1(num1);
                 System.out.print("Segundo valor: ");
                 int num2 = scanner.nextInt();
+                calculadora.setNum2(num2);
                 System.out.print("Operación (Suma +, Resta -, Multiplicacion *,Division /): ");
                 char operacion = scanner.next().charAt(0); //Toma el primer caracter
 
@@ -22,16 +24,16 @@ public class Main {
 
                 switch (operacion) {
                     case '+':
-                        resultado = calculadora.suma(num1, num2);
+                        resultado = calculadora.suma(calculadora.getNum1(), calculadora.getNum2());
                         break;
                     case '-':
-                        resultado = calculadora.resta(num1, num2);
+                        resultado = calculadora.resta(calculadora.getNum1(), calculadora.getNum2());
                         break;
                     case '*':
-                        resultado = calculadora.multiplicacion(num1, num2);
+                        resultado = calculadora.multiplicacion(calculadora.getNum1(), calculadora.getNum2());
                         break;
                     case '/':
-                        resultado = calculadora.division(num1, num2);
+                        resultado = calculadora.division(calculadora.getNum1(), calculadora.getNum2());
                         break;
                     default:
                         System.out.println("Operación inválida.");
