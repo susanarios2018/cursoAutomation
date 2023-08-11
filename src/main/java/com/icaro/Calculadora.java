@@ -5,6 +5,7 @@ public class Calculadora {
         private int num2;
 
         public void setNum1(int num1){
+
             this.num1=num1;
         }
         public int getNum1(){
