@@ -9,15 +9,18 @@ package EjercicioVehiculos;
         }
 
         public int getCilindrada() {
+
             return cilindrada;
         }
 
         public void setCilindrada(int cilindrada) {
+
             this.cilindrada = cilindrada;
         }
 
         @Override  //Para sobrescribir el metodo acelerar
         public void acelerar() {
+
             System.out.println("El coche está acelerando.");
         }
     }
