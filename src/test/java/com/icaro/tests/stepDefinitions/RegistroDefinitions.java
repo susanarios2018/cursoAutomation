@@ -1,4 +1,5 @@
 package com.icaro.tests.stepDefinitions;
+import com.github.javafaker.Faker;
 import com.icaro.tests.*;
 import com.icaro.tests.Hooks.Hooks;
 import io.cucumber.java.es.Cuando;
@@ -21,8 +22,9 @@ public class RegistroDefinitions {
     }
     @Cuando("El usuario completa el formulario")
     public void ElUsuarioCompletaFormulario() {
+        Faker faker=new Faker();
         RegistroPractica10 registroPractica10=new RegistroPractica10(Hooks.getDriver());
-        registroPractica10.registro("Susana","Rios","probandosuuuuu@gmail.com","123456","probando","probando");
+        registroPractica10.registro(faker.name().firstName(),faker.name().lastName(),faker.internet().emailAddress(),faker.phoneNumber().phoneNumber(),faker.internet().password(),faker.internet().password());
         System.out.println("Completa el formulario");
 
     }

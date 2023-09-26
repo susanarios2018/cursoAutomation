@@ -1,4 +1,5 @@
 package com.icaro.tests;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +26,7 @@ public class RegistroPractica10 {
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(15));
     }
     public void registro(String nombre,String apellido,String email,String telefono, String pass, String confirmpass){
+
         WebElement firstInput= wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input-firstname")));
         firstInput.sendKeys(nombre);
         WebElement lastInput= wait.until(ExpectedConditions.presenceOfElementLocated(By.id("input-lastname")));
