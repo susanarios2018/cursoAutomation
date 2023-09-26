@@ -5,12 +5,22 @@
       Cuando El usuario ingresa email y contraseña validos
       Entonces El usuario se encuentra en la pantalla de su cuenta
 
-    Escenario: Registro exitoso de usuario
-      Dado Estoy en la página de inicio
-      Cuando Hago clic en Iniciar Sesión
-      Y Lleno el formulario de registro con los siguientes datos:
-      | Nombre    | Apellido  | Email                  | Teléfono      | Contraseña  | Confirmación Contraseña |
-      | Susana    | Rios      | probandosuuuuu@gmail.com| 123456        | probando    | probando                |
-      Y Acepto los términos y condiciones
-      Y Hago clic en "Continuar"
-      Entonces Debería ver la página de cuenta con el título Account
+    Escenario: Registro correcto
+      Dado Que el usuario ingresa al Register de la pagina opencart
+      Cuando El usuario completa el formulario
+      Entonces Verifica creacion de cuenta con el título "Account"
+
+    Escenario: Agrega favorito
+      Dado Que el usuario se loguea en la pagina opencart
+      Cuando El usuario se encuentra en la solapa cameras
+      Entonces Selecciona la camara a favoritos
+      Y Valida el titulo de la camara
+
+    Escenario:
+      Dado Se loguea
+      Cuando El usuario accede a la solapa cameras
+      Entonces Agrega una camara al carro de compras
+      Y Valida el titulo de la camara en el carro de compras
+
+
+

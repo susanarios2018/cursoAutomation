@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
      features = "src/main/resources/features",
-        glue={"com.icaro.tests.stepDefinitions", "com.icaro.tests.hooks"},
+        glue={"com.icaro.tests.stepDefinitions", "com.icaro.tests.Hooks"},
         snippets=CucumberOptions.SnippetType.CAMELCASE
 )
 

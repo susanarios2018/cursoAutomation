@@ -9,8 +9,8 @@ import java.time.Duration;
 
 public class VerCarritoTPFinal {
     private By consulta=By.id("cart-total");
-    private By selecciona=By.xpath("//select[@id='input-option226']/option[@value='15']\n");
-    private By botoncarro=By.id("button-cart");
+    private By viewcart=By.xpath("//*[@class=\"text-right\"]//*[@class=\"fa fa-shopping-cart\"]");
+
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -21,10 +21,10 @@ public class VerCarritoTPFinal {
     public void consultaCarrito(){
         WebElement consCarro= wait.until(ExpectedConditions.elementToBeClickable(By.id("cart-total")));
         consCarro.click();
-        WebElement eligeselect= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='input-option226']/option[@value='15']\n")));
-        eligeselect.click();
-        WebElement botoncarrito= wait.until(ExpectedConditions.elementToBeClickable(By.id("button-cart")));
-        botoncarrito.click();
+        WebElement vercarro= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"text-right\"]//*[@class=\"fa fa-shopping-cart\"]")));
+        vercarro.click();
+
+
 
     }
 }

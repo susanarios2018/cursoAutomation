@@ -12,7 +12,7 @@ public class BaseTest {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    public static WebDriver getDriver() {
+    public  WebDriver getDriver() {
         return driver;
     }
 
@@ -29,6 +29,7 @@ public class BaseTest {
         options.setPageLoadTimeout(Duration.ofSeconds(60));
         this.driver = new ChromeDriver(options);
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(15));
+
 
 
     }

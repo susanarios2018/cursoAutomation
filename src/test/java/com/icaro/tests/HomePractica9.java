@@ -23,7 +23,9 @@ public class HomePractica9 {
         WebElement singin= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"dropdown-menu dropdown-menu-right\"]/child::li[2]")));
         singin.click();
     }
-
+    public void ingresaPagina(String url){
+        this.driver.get(url);
+    }
     }
 
 

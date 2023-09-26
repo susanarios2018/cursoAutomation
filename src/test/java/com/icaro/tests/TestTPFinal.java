@@ -22,9 +22,9 @@ public class TestTPFinal extends BaseTest {
         VerCarritoTPFinal verCarritoTPFinal=new VerCarritoTPFinal(getDriver());
         verCarritoTPFinal.consultaCarrito();
 
-        //VerificarCarritoTPFinal verificarCarritoTPFinal = new VerificarCarritoTPFinal(getDriver());
+        VerificarCarritoTPFinal verificarCarritoTPFinal = new VerificarCarritoTPFinal(getDriver());
 
-        //Assert.assertTrue(verificarCarritoTPFinal.validaTitulo("Canon EOS 5D"));
+        Assert.assertTrue(verificarCarritoTPFinal.validaTitulo("Canon EOS 5D"));
 
     }
 }
